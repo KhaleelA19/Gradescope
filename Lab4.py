@@ -10,13 +10,12 @@ def fibonacci(x):
 
 def is_prime(x):
     n = 2
-    while n < math.sqrt(x):
-        if x < 2:
+    while n < math.sqrt(x) and not ValueError:
+        if x <= 2:
             return False
         elif x % n == 0:
             return False
-        else:
-            n += 1
+    n += 1
 
 
 def print_prime_factors(x):
