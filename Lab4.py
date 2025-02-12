@@ -26,5 +26,5 @@ def print_prime_factors(x):
             x //= divisor
         divisor += 1
 
-    print(" * ".join(map(str, factor_list)))
+    print(f"{x} = * ".join(map(str, factor_list)))
 
