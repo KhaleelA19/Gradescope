@@ -20,11 +20,11 @@ def is_prime(x):
 def print_prime_factors(x):
     factor_list = []
     divisor = 2
+    original = x
     while x > 1:
         while x % divisor == 0:
             factor_list.append(divisor)
             x //= divisor
         divisor += 1
 
-    print(" * ".join(map(str, factor_list)))
-
+    print(f"{original} =  {'*' .join(map(str, factor_list))} ")
