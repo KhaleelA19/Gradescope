@@ -9,26 +9,22 @@ def fibonacci(x):
         return fibonacci(x-1) + fibonacci(x-2)
 
 def is_prime(x):
-    n = 2
-    while n < math.sqrt(x) and not ValueError:
-        if x <= 2:
+    if x < 2:
+        return False
+    for n in range(2, math.sqrt(x)):
+        if x % n == 0:
             return False
-        elif x % n == 0:
-            return False
-        else:
-            return True
-    n += 1
+    return True
 
 
 def print_prime_factors(x):
-    n = 1
-    parameter = 1
-    while n != x:
-        try:
-            if x % n == 0:
-                return parameter * n
-            else:
-                return x * 1
-        except ValueError:
-            return False
-        n += 1
+    factor_list = []
+    divisor = 2
+    while x > 1:
+        while x % divisor == 0:
+            factor_list.append(divisor)
+            x //= divisor
+        divisor += 1
+
+    print(" * ".join(map(str, factor_list)))
+
