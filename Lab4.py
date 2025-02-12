@@ -11,7 +11,7 @@ def fibonacci(x):
 def is_prime(x):
     if x < 2:
         return False
-    for n in range(2, math.sqrt(x)):
+    for n in range(2, int(math.sqrt(x))):
         if x % n == 0:
             return False
     return True
@@ -26,5 +26,5 @@ def print_prime_factors(x):
             x //= divisor
         divisor += 1
 
-    print(f"{x} = * ".join(map(str, factor_list)))
+    print(" * ".join(map(str, factor_list)))
 
