@@ -15,6 +15,8 @@ def is_prime(x):
             return False
         elif x % n == 0:
             return False
+        else:
+            return True
     n += 1
 
 
